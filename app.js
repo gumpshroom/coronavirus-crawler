@@ -13,7 +13,7 @@ async function doRequest() {
                 //console.log(content)
                 obj = JSON.parse(content).results[0]
                 //console.log(obj)
-                for (var x = 6; x < Object.keys(obj).length - 1; x++) {
+                for (var x = Object.keys(obj).length - 1; x > 10; x--) {
                     obj[Object.keys(obj)[x]] = obj[Object.keys(obj)[x]].toString()
                     obj[Object.keys(obj)[x]] = await translate(obj[Object.keys(obj)[x]], {
                         from: "zh",
@@ -31,7 +31,7 @@ async function doRequest() {
 (async function(){
     await doRequest();
     console.log("loaded!");
-    setInterval(function(){doRequest()}, 300000)
+    setInterval(async function(){await doRequest()}, 100000)
 }())
 
 var server = http.createServer(async function (req, res) {
