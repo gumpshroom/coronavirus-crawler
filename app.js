@@ -13,7 +13,7 @@ async function doRequest() {
                 //console.log(content)
                 obj = JSON.parse(content).results[0]
                 //console.log(obj)
-                for (var x = Object.keys(obj).length - 1; x > 10; x--) {
+                for (var x = Object.keys(obj).length - 2; x > 10; x--) {
                     obj[Object.keys(obj)[x]] = obj[Object.keys(obj)[x]].toString()
                     obj[Object.keys(obj)[x]] = await translate(obj[Object.keys(obj)[x]], {
                         from: "zh",
