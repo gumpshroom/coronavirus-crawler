@@ -31,7 +31,7 @@ async function doRequest() {
 (async function(){
     await doRequest();
     console.log("loaded!");
-    setInterval(async function(){await doRequest()}, 100000)
+
 }())
 
 var server = http.createServer(async function (req, res) {
@@ -43,4 +43,4 @@ var server = http.createServer(async function (req, res) {
 
 });
 server.listen(process.env.PORT || 7000);
-
+setInterval(async function(){await doRequest()}, 100000)
