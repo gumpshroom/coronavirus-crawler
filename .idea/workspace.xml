@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="310607e9-5682-4cd3-ab73-5f1a604e97e8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/structure.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/app.js" afterDir="false" />
     </list>
@@ -60,12 +58,24 @@
       <workItem from="1583280285121" duration="6726000" />
       <workItem from="1583347124737" duration="1078000" />
       <workItem from="1583361379093" duration="652000" />
-      <workItem from="1583362040416" duration="318000" />
+      <workItem from="1583362040416" duration="3121000" />
     </task>
+    <task id="LOCAL-00001" summary="query the datas">
+      <created>1583362546296</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1583362546296</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="query the datas" />
+    <option name="LAST_COMMIT_MESSAGE" value="query the datas" />
   </component>
   <component name="WindowStateProjectService">
     <state x="446" y="134" key="#app.js" timestamp="1583362059890">
@@ -76,22 +86,26 @@
       <screen x="0" y="0" width="1440" height="900" />
     </state>
     <state x="176" y="108" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1583362078843" />
-    <state width="1420" height="236" key="GridCell.Tab.0.bottom" timestamp="1583362427210">
+    <state x="355" y="46" key="CommitChangelistDialog2" timestamp="1583362545589">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1420" height="236" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583362427210" />
-    <state width="1420" height="236" key="GridCell.Tab.0.center" timestamp="1583362427209">
+    <state x="355" y="46" key="CommitChangelistDialog2/0.0.1440.900@0.0.1440.900" timestamp="1583362545589" />
+    <state width="1420" height="236" key="GridCell.Tab.0.bottom" timestamp="1583377076219">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1420" height="236" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583362427209" />
-    <state width="1420" height="236" key="GridCell.Tab.0.left" timestamp="1583362427209">
+    <state width="1420" height="236" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1583377076219" />
+    <state width="1420" height="236" key="GridCell.Tab.0.center" timestamp="1583377076219">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1420" height="236" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583362427209" />
-    <state width="1420" height="236" key="GridCell.Tab.0.right" timestamp="1583362427210">
+    <state width="1420" height="236" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1583377076219" />
+    <state width="1420" height="236" key="GridCell.Tab.0.left" timestamp="1583377076219">
       <screen x="0" y="0" width="1440" height="900" />
     </state>
-    <state width="1420" height="236" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583362427210" />
+    <state width="1420" height="236" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1583377076219" />
+    <state width="1420" height="236" key="GridCell.Tab.0.right" timestamp="1583377076219">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state width="1420" height="236" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1583377076219" />
     <state x="224" y="96" key="SettingsEditor" timestamp="1583362028658">
       <screen x="0" y="0" width="1440" height="900" />
     </state>

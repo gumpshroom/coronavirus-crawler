@@ -6,6 +6,7 @@ translate.engine = 'yandex';
 translate.key = 'trnsl.1.1.20200304T005113Z.2795cde4b46f70e0.0d41d338b63244dfd4b89156cb6cf1a0876c648c   ';
 var obj = {}
 var lastArea = {}
+var areaResults = {}
 async function doRequest() {
     return new Promise(async resolve => {
 
@@ -28,6 +29,20 @@ async function doRequest() {
 
             }
         })
+        request("http://lab.isaaclin.cn/nCoV/api/area?latest=1", async function (error, response, body) {
+            console.log(3)
+            var content = body.split("<html>", 1)[0]
+            if (content) {
+                console.log(content)
+                var results = JSON.parse(content).results
+                areaResults = results.slice()
+                //lastArea = {countryEnglishName: "no data"}
+                //console.log(results)
+                console.log(areaResults)
+
+            }
+        })
+        resolve()
     })
 }
 (async function(){
@@ -39,29 +54,7 @@ async function searchData(area) {
     console.log(1)
     return new Promise(async resolve => {
         console.log(2)
-        request("http://lab.isaaclin.cn/nCoV/api/area?latest=1", async function (error, response, body) {
-            console.log(3)
-            var content = body.split("<html>", 1)[0]
-            if (content) {
-                //console.log(content)
-                var results = JSON.parse(content).results
-                //lastArea = {countryEnglishName: "no data"}
-                //console.log(results)
-                for(var x = 0; x < results.length; x++) {
-                    console.log(results[x].countryEnglishName)
-                    console.log(area)
-                    if(results[x].countryEnglishName === area) {
-                        lastArea = results[x]
-                        console.log(4)
-                        break;
-                    }
-                    if(x === results.length - 1) {
-                        lastArea = {countryEnglishName: "no data"}
-                    }
-                }
-                resolve()
-            }
-        })
+
     })
 }
 var server = http.createServer(async function (req, res) {
@@ -70,12 +63,27 @@ var server = http.createServer(async function (req, res) {
         res.writeHead(200,
             {"Content-Type": "application/json"});
         res.end(JSON.stringify(obj));
-    } else if(req.url.startsWith("/search")) {
+    } else if(req.url.startsWith("/search?area=")) {
         const queryObject = url.parse(req.url,true).query;
-        await searchData(queryObject.area)
+        var area = queryObject.area
+        for(var x = 0; x < areaResults.length; x++) {
+            console.log(areaResults[x].countryEnglishName)
+            console.log(area)
+            if(areaResults[x].countryEnglishName === area) {
+                lastArea = areaResults[x]
+                console.log(4)
+                break;
+            }
+            if(x === areaResults.length - 1) {
+                lastArea = {countryEnglishName: "no data"}
+            }
+        }
         res.writeHead(200,
             {"Content-Type": "application/json"})
         res.end(JSON.stringify(lastArea));
+    } else {
+        res.writeHead(404, {"Content-Type": "application/json"})
+        res.end("not found")
     }
 
 });
